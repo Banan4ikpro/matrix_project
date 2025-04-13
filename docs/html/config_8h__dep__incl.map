@@ -1,0 +1,22 @@
+<map id="include/config.h" name="include/config.h">
+<area shape="rect" id="Node000001" title="Конфиг для глобальных настроек" alt="" coords="185,5,309,31"/>
+<area shape="rect" id="Node000002" href="$matrix_8h.html" title="Заголовочный файл для matrix." alt="" coords="341,79,488,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,34,388,76,386,81,285,38"/>
+<area shape="rect" id="Node000006" href="$output_8c.html" title="Функции вывода матриц в консоль" alt="" coords="5,225,149,251"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="231,43,89,227,84,223,227,40"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="Основной файл с демонстрацией работы библиотеки" alt="" coords="514,152,603,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,108,536,149,534,154,449,112"/>
+<area shape="rect" id="Node000004" href="$matrix_8c.html" title="Основная реализация операций с матрицами" alt="" coords="628,152,775,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="474,105,656,149,654,154,473,110"/>
+<area shape="rect" id="Node000005" href="$output_8h.html" title="Заголовочный файл для output." alt="" coords="170,152,315,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="376,112,272,154,270,149,374,107"/>
+<area shape="rect" id="Node000007" href="$tests__main_8c.html" title="Общие тесты" alt="" coords="173,225,315,251"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="328,104,226,122,185,136,159,154,155,163,155,173,168,192,191,209,218,223,215,228,189,214,164,195,150,174,149,162,155,150,182,132,225,117,327,99"/>
+<area shape="rect" id="Node000008" href="$tests__output_8c.html" title="Набор тестов для библиотеки output." alt="" coords="537,225,687,251"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="502,91,583,96,668,106,742,123,770,135,789,150,797,166,797,180,788,192,774,202,734,218,688,229,687,224,733,213,772,197,785,188,792,178,792,167,785,154,767,140,740,128,667,111,583,101,502,97"/>
+<area shape="rect" id="Node000009" href="$tests__matrix_8c.html" title="Набор тестов для библиотеки matrix." alt="" coords="339,152,490,177"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="417,118,417,152,412,152,412,118"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="205,185,105,228,103,223,203,180"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="246,191,246,225,241,225,240,191"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="316,177,553,223,552,228,315,183"/>
+</map>

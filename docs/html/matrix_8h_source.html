@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matrix project: Исходный файл src/matrix/matrix.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matrix project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_40d7732de2983c682bb99d86585a563c.html">matrix</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">matrix.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="matrix_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MATRIX_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MATRIX_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../../include/config.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structMatrix.html">   13</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">   14</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">rows</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">cols</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structMatrix.html#afda04dbb307a169b4235dba98fb5b9df">   16</a></span>    <span class="keywordtype">int</span> **<a class="code hl_variable" href="structMatrix.html#afda04dbb307a169b4235dba98fb5b9df">data</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>} <a class="code hl_struct" href="structMatrix.html">Matrix</a>;</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a18d13a7aba45f04c4030f7846942837e">load_matrix</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_struct" href="structMatrix.html">Matrix</a> **m); </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><a class="code hl_struct" href="structMatrix.html">Matrix</a>* <a class="code hl_function" href="matrix_8h.html#ab17e800cd093f1cdcecd670ee68f8c31">transpose_matrix</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m);              </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#ac583db9bd81ac2e3c113742c1422790d">add_matrices</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m1, <span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m2, <a class="code hl_struct" href="structMatrix.html">Matrix</a> **result); </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a1e2d36a07f8cb17dd37d54882d5edcc9">subtract_matrices</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m1, <span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m2, <a class="code hl_struct" href="structMatrix.html">Matrix</a> **result); </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#af7639c59c59db8e8001f98b06e7b7cf9">multiply_matrices</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m1, <span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m2, <a class="code hl_struct" href="structMatrix.html">Matrix</a> **result); </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a09b52a3fbabc80ab905cca49ff4ae299">save_matrix</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m); </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="matrix_8h.html#a97cad136b8e5a835af5aeabdd3be7470">free_matrix</a>(<a class="code hl_struct" href="structMatrix.html">Matrix</a> *m); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a4e76c7f97ed74722cdf4419ac5ec06c5">copy_matrix</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *source);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">int</span> <a class="code hl_function" href="matrix_8h.html#a941e87df62472b94ae16af2da7aa2530">determinant_matrix</a> (<span class="keyword">const</span> <a class="code hl_struct" href="structMatrix.html">Matrix</a> *m);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="ttc" id="amatrix_8h_html_a09b52a3fbabc80ab905cca49ff4ae299"><div class="ttname"><a href="matrix_8h.html#a09b52a3fbabc80ab905cca49ff4ae299">save_matrix</a></div><div class="ttdeci">int save_matrix(const char *filename, const Matrix *m)</div><div class="ttdoc">Сохраняет матрицу в текстовый файл</div><div class="ttdef"><b>Definition</b> matrix.c:208</div></div>
+<div class="ttc" id="amatrix_8h_html_a18d13a7aba45f04c4030f7846942837e"><div class="ttname"><a href="matrix_8h.html#a18d13a7aba45f04c4030f7846942837e">load_matrix</a></div><div class="ttdeci">int load_matrix(const char *filename, Matrix **m)</div><div class="ttdoc">Загружает матрицу из текстового файла</div><div class="ttdef"><b>Definition</b> matrix.c:16</div></div>
+<div class="ttc" id="amatrix_8h_html_a1e2d36a07f8cb17dd37d54882d5edcc9"><div class="ttname"><a href="matrix_8h.html#a1e2d36a07f8cb17dd37d54882d5edcc9">subtract_matrices</a></div><div class="ttdeci">int subtract_matrices(const Matrix *m1, const Matrix *m2, Matrix **result)</div><div class="ttdoc">Вычитает одну матрицу из другой</div><div class="ttdef"><b>Definition</b> matrix.c:137</div></div>
+<div class="ttc" id="amatrix_8h_html_a4e76c7f97ed74722cdf4419ac5ec06c5"><div class="ttname"><a href="matrix_8h.html#a4e76c7f97ed74722cdf4419ac5ec06c5">copy_matrix</a></div><div class="ttdeci">int copy_matrix(const Matrix *source)</div><div class="ttdoc">Копирует матрицу</div><div class="ttdef"><b>Definition</b> matrix.c:244</div></div>
+<div class="ttc" id="amatrix_8h_html_a941e87df62472b94ae16af2da7aa2530"><div class="ttname"><a href="matrix_8h.html#a941e87df62472b94ae16af2da7aa2530">determinant_matrix</a></div><div class="ttdeci">int determinant_matrix(const Matrix *m)</div><div class="ttdoc">Вычисляет детерминант квадратной матрицы</div><div class="ttdef"><b>Definition</b> matrix.c:271</div></div>
+<div class="ttc" id="amatrix_8h_html_a97cad136b8e5a835af5aeabdd3be7470"><div class="ttname"><a href="matrix_8h.html#a97cad136b8e5a835af5aeabdd3be7470">free_matrix</a></div><div class="ttdeci">void free_matrix(Matrix *m)</div><div class="ttdoc">Освобождает память, выделенную под матрицу</div><div class="ttdef"><b>Definition</b> matrix.c:229</div></div>
+<div class="ttc" id="amatrix_8h_html_ab17e800cd093f1cdcecd670ee68f8c31"><div class="ttname"><a href="matrix_8h.html#ab17e800cd093f1cdcecd670ee68f8c31">transpose_matrix</a></div><div class="ttdeci">Matrix * transpose_matrix(const Matrix *m)</div><div class="ttdoc">Транспонирует матрицу</div><div class="ttdef"><b>Definition</b> matrix.c:82</div></div>
+<div class="ttc" id="amatrix_8h_html_ac583db9bd81ac2e3c113742c1422790d"><div class="ttname"><a href="matrix_8h.html#ac583db9bd81ac2e3c113742c1422790d">add_matrices</a></div><div class="ttdeci">int add_matrices(const Matrix *m1, const Matrix *m2, Matrix **result)</div><div class="ttdoc">Складывает две матрицы</div><div class="ttdef"><b>Definition</b> matrix.c:107</div></div>
+<div class="ttc" id="amatrix_8h_html_af7639c59c59db8e8001f98b06e7b7cf9"><div class="ttname"><a href="matrix_8h.html#af7639c59c59db8e8001f98b06e7b7cf9">multiply_matrices</a></div><div class="ttdeci">int multiply_matrices(const Matrix *m1, const Matrix *m2, Matrix **result)</div><div class="ttdoc">Умножает две матрицы</div><div class="ttdef"><b>Definition</b> matrix.c:171</div></div>
+<div class="ttc" id="astructMatrix_html"><div class="ttname"><a href="structMatrix.html">Matrix</a></div><div class="ttdoc">Структура матрицы</div><div class="ttdef"><b>Definition</b> matrix.h:13</div></div>
+<div class="ttc" id="astructMatrix_html_a2067cc7ed367cc427cd869b3e1074ad7"><div class="ttname"><a href="structMatrix.html#a2067cc7ed367cc427cd869b3e1074ad7">Matrix::cols</a></div><div class="ttdeci">int cols</div><div class="ttdef"><b>Definition</b> matrix.h:15</div></div>
+<div class="ttc" id="astructMatrix_html_a994b1578e9a64d5cc3c4d0b11d7532a9"><div class="ttname"><a href="structMatrix.html#a994b1578e9a64d5cc3c4d0b11d7532a9">Matrix::rows</a></div><div class="ttdeci">int rows</div><div class="ttdef"><b>Definition</b> matrix.h:14</div></div>
+<div class="ttc" id="astructMatrix_html_afda04dbb307a169b4235dba98fb5b9df"><div class="ttname"><a href="structMatrix.html#afda04dbb307a169b4235dba98fb5b9df">Matrix::data</a></div><div class="ttdeci">int ** data</div><div class="ttdef"><b>Definition</b> matrix.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

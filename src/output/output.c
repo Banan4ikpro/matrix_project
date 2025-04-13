@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include "output.h"
-#include "config.h"  // Подключаем настройки
+#include "config.h" 
 
-// Вывод матрицы в консоль
+/**
+ * @file output.c
+ * @brief  Функции вывода матриц в консоль
+ */
+
+/**
+ * @brief Выводит матрицу в консоль
+ * @param Matrix Указатель на матрицу
+ */
 void print_matrix_console(const Matrix *m) {
     if (!m) {
         printf("Матрица пуста\n");
@@ -17,19 +25,4 @@ void print_matrix_console(const Matrix *m) {
     printf("\n");
 }
 
-// Сохранение матрицы в файл
-int save_matrix_to_file(const char *filename, const Matrix *m) {
-    FILE *f = fopen(filename, "w");
-    if (!f) return 0;
-
-    fprintf(f, "%d %d\n", m->rows, m->cols);
-    for (int i = 0; i < m->rows; i++) {
-        for (int j = 0; j < m->cols; j++)
-            fprintf(f, ELEM_FMT " ", m->data[i][j]);  // Используем макрос формата
-        fprintf(f, "\n");
-    }
-
-    fclose(f);
-    return 1;
-}
 

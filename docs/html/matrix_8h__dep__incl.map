@@ -1,0 +1,19 @@
+<map id="src/matrix/matrix.h" name="src/matrix/matrix.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл для matrix." alt="" coords="285,5,431,31"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Основной файл с демонстрацией работы библиотеки" alt="" coords="5,79,95,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,36,95,82,94,77,295,31"/>
+<area shape="rect" id="Node000003" href="$matrix_8c.html" title="Основная реализация операций с матрицами" alt="" coords="119,79,266,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,38,221,81,219,76,318,34"/>
+<area shape="rect" id="Node000004" href="$output_8h.html" title="Заголовочный файл для output." alt="" coords="341,79,487,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="378,40,407,77,403,80,374,43"/>
+<area shape="rect" id="Node000006" href="$tests__main_8c.html" title="Общие тесты" alt="" coords="177,152,318,177"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="343,43,258,153,254,150,339,40"/>
+<area shape="rect" id="Node000007" href="$tests__output_8c.html" title="Набор тестов для библиотеки output." alt="" coords="511,152,661,177"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="409,33,455,51,501,76,546,114,578,150,574,153,542,118,498,81,453,56,407,38"/>
+<area shape="rect" id="Node000008" href="$tests__matrix_8c.html" title="Набор тестов для библиотеки matrix." alt="" coords="563,79,713,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="417,31,593,76,592,81,415,37"/>
+<area shape="rect" id="Node000005" href="$output_8c.html" title="Функции вывода матриц в консоль" alt="" coords="342,152,486,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="417,118,417,152,411,152,411,118"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="376,112,276,154,274,149,374,107"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="455,107,559,149,557,154,453,112"/>
+</map>

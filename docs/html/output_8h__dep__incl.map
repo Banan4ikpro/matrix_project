@@ -1,0 +1,9 @@
+<map id="src/output/output.h" name="src/output/output.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл для output." alt="" coords="171,5,317,31"/>
+<area shape="rect" id="Node000002" href="$output_8c.html" title="Функции вывода матриц в консоль" alt="" coords="5,79,149,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,38,106,81,104,76,204,34"/>
+<area shape="rect" id="Node000003" href="$tests__main_8c.html" title="Общие тесты" alt="" coords="173,79,315,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,44,247,79,241,79,241,44"/>
+<area shape="rect" id="Node000004" href="$tests__output_8c.html" title="Набор тестов для библиотеки output." alt="" coords="339,79,490,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="285,33,388,76,386,81,283,38"/>
+</map>

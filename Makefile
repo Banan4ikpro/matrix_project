@@ -9,6 +9,24 @@ SRC = src/matrix/matrix.c src/output/output.c
 MAIN = src/main.c
 TESTS = tests/tests_matrix.c tests/tests_output.c tests/tests_main.c
 
+# Форматирование кода через clang-format
+format:
+	clang-format -style=LLVM -i $(wildcard src/*.c src/*.h)
+
+
+# Генерация конфигурационного файла .clang-format
+generate-clang-format-config:
+	$(CLANG_FORMAT) -style=LLVM -dump-config > .clang-format
+
+# Статический анализ кода через cppcheck
+lint:
+	cppcheck --enable=all --inconclusive src/
+
+
+# Запуск автотестов CUnit
+test:
+	$(CUNIT)
+
 # Цели
 all: build/main
 

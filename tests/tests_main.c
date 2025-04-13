@@ -3,6 +3,14 @@
 #include "matrix.h"
 #include "output.h"
 
+/**
+ * @file tests_main.c
+ * @brief Общие тесты
+ */
+
+/**
+ * @brief Тестирование файла main.c
+ */
 void test_expression() {
     Matrix *A = create_matrix(2, 2);
     Matrix *B = create_matrix(2, 2);
@@ -31,6 +39,9 @@ void test_expression() {
     free_matrix(CT); free_matrix(sum); free_matrix(expr); free_matrix(result);
 }
 
+/**
+ * @brief Выполнение теста
+ */
 int main() {
     test_expression();
     printf("✅ tests_main.c: Интеграционные тесты прошли успешно\n");

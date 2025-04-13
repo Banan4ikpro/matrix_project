@@ -1,0 +1,14 @@
+<map id="tests/tests_output.c" name="tests/tests_output.c">
+<area shape="rect" id="Node000001" title="Набор тестов для библиотеки output." alt="" coords="95,5,246,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,33,73,74,71,70,148,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,79,171,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,32,148,68,143,65,162,30"/>
+<area shape="rect" id="Node000004" href="$matrix_8h.html" title="Заголовочный файл для matrix." alt="" coords="207,152,284,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,30,235,138,231,141,174,32"/>
+<area shape="rect" id="Node000006" href="$output_8h.html" title="Заголовочный файл для output." alt="" coords="246,79,322,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="190,28,256,69,253,74,187,33"/>
+<area shape="rect" id="Node000005" href="$config_8h.html" title="Конфиг для глобальных настроек" alt="" coords="171,225,319,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="248,178,248,212,243,212,243,178"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="280,106,260,141,256,139,275,103"/>
+</map>

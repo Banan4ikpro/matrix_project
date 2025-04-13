@@ -3,7 +3,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Загрузка матрицы с автоматическим определением размеров
+/**
+ * @file matrix.c
+ * @brief Основная реализация операций с матрицами
+ */
+
+/**
+ * @brief Загружает матрицу из текстового файла
+ * @param filename Имя файла
+ * @return Указатель на загруженную матрицу или NULL в случае ошибки
+ */
 int load_matrix(const char *filename, Matrix **m) {
     FILE *file = fopen(filename, "r");
     if (!file) {
@@ -65,7 +74,11 @@ int load_matrix(const char *filename, Matrix **m) {
 }
 
 
-// Транспонирование матрицы
+/**
+ * @brief Транспонирует матрицу
+ * @param Matrix Указатель на матрицу
+ * @return Указатель на новую транспонированную матрицу, либо NULL в случае ошибки
+ */ 
 Matrix* transpose_matrix(const Matrix *m) {
     Matrix *result = (Matrix *)malloc(sizeof(Matrix));
     result->rows = m->cols;
@@ -85,7 +98,12 @@ Matrix* transpose_matrix(const Matrix *m) {
     return result;
 }
 
-// Сложение двух матриц
+/**
+ * @brief Складывает две матрицы
+ * @param m1 Указатель на первую матрицу
+ * @param m2 Указатель на вторую матрицу
+ * @return Указатель на новую матрицу — результат сложения, либо NULL в случае ошибки
+ */
 int add_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
     if (!m1 || !m2) return -1;
     if (m1->rows != m2->rows || m1->cols != m2->cols) return -2;
@@ -110,7 +128,12 @@ int add_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
 }
 
 
-// Вычитание двух матриц
+/**
+ * @brief Вычитает одну матрицу из другой
+ * @param m1 Указатель на первую матрицу
+ * @param m2 Указатель на вторую матрицу
+ * @return Указатель на новую матрицу — результат вычитания, либо NULL в случае ошибки
+ */
 int subtract_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
     if (m1->rows != m2->rows || m1->cols != m2->cols) {
         return -1;
@@ -139,7 +162,12 @@ int subtract_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
 }
 
 
-// Умножение двух матриц
+/**
+ * @brief Умножает две матрицы
+ * @param m1 Указатель на первую матрицу
+ * @param m2 Указатель на вторую матрицу
+ * @return Указатель на новую матрицу — результат умножения, либо NULL в случае ошибки
+ */
 int multiply_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
     if (m1->cols != m2->rows) {
         return -1;
@@ -171,16 +199,18 @@ int multiply_matrices(const Matrix *m1, const Matrix *m2, Matrix **result) {
     return 0;
 }
 
-// Сохранение матрицы в файл
+/**
+ * @brief Сохраняет матрицу в текстовый файл
+ * @param Matrix Указатель на матрицу
+ * @param filename Имя файла
+ * @return 0 в случае успеха, -1 в случае ошибки
+ */
 int save_matrix(const char *filename, const Matrix *m) {
     FILE *file = fopen(filename, "w");
     if (!file) {
         return -1;
     }
 
-    
-
-    // Запись данных матрицы
     for (int i = 0; i < m->rows; i++) {
         for (int j = 0; j < m->cols; j++) {
             fprintf(file, "%d ", m->data[i][j]);
@@ -192,7 +222,10 @@ int save_matrix(const char *filename, const Matrix *m) {
     return 0;
 }
 
-// Освобождение памяти, занятой матрицей
+/**
+ * @brief Освобождает память, выделенную под матрицу
+ * @param Matrix Указатель на матрицу
+ */
 void free_matrix(Matrix *m) {
     if (m) {
         for (int i = 0; i < m->rows; i++) {
@@ -202,5 +235,58 @@ void free_matrix(Matrix *m) {
         free(m);
     }
 }
+
+/**
+ * @brief Копирует матрицу
+ * @param source Указатель на исходную матрицу
+ * @return Указатель на копию матрицы или NULL в случае ошибки
+ */
+Matrix* copy_matrix(const Matrix *source) {
+    // Создаем новую матрицу для результата
+    Matrix *destination = (Matrix *)malloc(sizeof(Matrix));
+    destination->rows = source->rows;
+    destination->cols = source->cols;
+    destination->data = (int **)malloc(destination->rows * sizeof(int *));
+    for (int i = 0; i < destination->rows; i++) {
+        destination->data[i] = (int *)malloc(destination->cols * sizeof(int));
+    }
+
+    // Копирование данных из source в destination
+    for (int i = 0; i < source->rows; i++) {
+        for (int j = 0; j < source->cols; j++) {
+            destination->data[i][j] = source->data[i][j];
+        }
+    }
+
+    return destination; // Возвращаем указатель на новую матрицу
+}
+
+
+
+/**
+ * @brief Вычисляет детерминант квадратной матрицы
+ * @param Matrix Указатель на квадратную матрицу
+ * @return Значение детерминанта матрицы
+ */
+int determinant_matrix (const Matrix *m) {
+    if (m->rows != m->cols) {
+        return 0; // Детерминант можно вычислить только для квадратных матриц
+    }
+
+    if (m->rows == 1) {
+        return m->data[0][0]; // Для 1x1 матрицы детерминант — это сам элемент
+    }
+
+    int det = 0;
+    for (int i = 0; i < m->cols; i++) {
+        Matrix *minor = get_minor(m, 0, i); // Получаем минор для элемента [0][i]
+        int sign = (i % 2 == 0) ? 1 : -1; // Чередование знаков
+        det += sign * m->data[0][i] * determinant(minor); // Рекурсивно вычисляем детерминант
+        free_matrix(minor); // Освобождаем память от временной минорной матрицы
+    }
+
+    return det;
+}
+
 
 

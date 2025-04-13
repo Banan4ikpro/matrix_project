@@ -1,0 +1,37 @@
+\doxysection{matrix.\+h}
+\hypertarget{matrix_8h_source}{}\label{matrix_8h_source}\index{src/matrix/matrix.h@{src/matrix/matrix.h}}
+\mbox{\hyperlink{matrix_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATRIX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATRIX\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../../include/config.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMatrix_a994b1578e9a64d5cc3c4d0b11d7532a9}{rows}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMatrix_a2067cc7ed367cc427cd869b3e1074ad7}{cols}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ **\mbox{\hyperlink{structMatrix_afda04dbb307a169b4235dba98fb5b9df}{data}};}
+\DoxyCodeLine{00017\ \}\ \mbox{\hyperlink{structMatrix}{Matrix}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a18d13a7aba45f04c4030f7846942837e}{load\_matrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{structMatrix}{Matrix}}\ **m);\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{structMatrix}{Matrix}}*\ \mbox{\hyperlink{matrix_8h_ab17e800cd093f1cdcecd670ee68f8c31}{transpose\_matrix}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m);\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_ac583db9bd81ac2e3c113742c1422790d}{add\_matrices}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m2,\ \mbox{\hyperlink{structMatrix}{Matrix}}\ **result);\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a1e2d36a07f8cb17dd37d54882d5edcc9}{subtract\_matrices}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m2,\ \mbox{\hyperlink{structMatrix}{Matrix}}\ **result);\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_af7639c59c59db8e8001f98b06e7b7cf9}{multiply\_matrices}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m2,\ \mbox{\hyperlink{structMatrix}{Matrix}}\ **result);\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a09b52a3fbabc80ab905cca49ff4ae299}{save\_matrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m);\ }
+\DoxyCodeLine{00064\ \ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix_8h_a97cad136b8e5a835af5aeabdd3be7470}{free\_matrix}}(\mbox{\hyperlink{structMatrix}{Matrix}}\ *m);\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a4e76c7f97ed74722cdf4419ac5ec06c5}{copy\_matrix}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *source);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{matrix_8h_a941e87df62472b94ae16af2da7aa2530}{determinant\_matrix}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structMatrix}{Matrix}}\ *m);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00087\ }
+
+\end{DoxyCode}
