@@ -6,21 +6,17 @@
 typedef struct {
     int rows;
     int cols;
-    elem_t **data;
+    int **data;
 } Matrix;
 
-Matrix* create_matrix(int rows, int cols);
-void free_matrix(Matrix *m);
-
-int load_matrix(const char *filename, Matrix **m);
-void print_matrix(const Matrix *m);
-
-Matrix* copy_matrix(const Matrix *m);
-Matrix* add_matrix(const Matrix *a, const Matrix *b);
-Matrix* sub_matrix(const Matrix *a, const Matrix *b);
-Matrix* mul_matrix(const Matrix *a, const Matrix *b);
-Matrix* transpose_matrix(const Matrix *m);
-double determinant(Matrix *m);
+// Функции для работы с матрицами
+int load_matrix(const char *filename, Matrix **m);      // Загрузка матрицы
+Matrix* transpose_matrix(const Matrix *m);              // Транспонирование
+int add_matrices(const Matrix *m1, const Matrix *m2, Matrix **result); // Сложение матриц
+int subtract_matrices(const Matrix *m1, const Matrix *m2, Matrix **result); // Вычитание матриц
+int multiply_matrices(const Matrix *m1, const Matrix *m2, Matrix **result); // Умножение матриц
+int save_matrix(const char *filename, const Matrix *m);  // Сохранение матрицы в файл
+void free_matrix(Matrix *m); // Освобождение памяти
 
 #endif
 

@@ -1,30 +1,50 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "matrix.h"
-#include "output.h"
 
 int main() {
-    Matrix *A, *B, *C, *D;
+    Matrix *A=NULL, *B=NULL, *C=NULL, *D=NULL;
+    Matrix *C_T=NULL, *B_plus_CT=NULL, *B_plus_CT_minus_D=NULL, *Result=NULL;
 
-    if (!load_matrix("data/A.txt", &A) ||
-        !load_matrix("data/B.txt", &B) ||
-        !load_matrix("data/C.txt", &C) ||
-        !load_matrix("data/D.txt", &D)) {
-        printf("Ошибка загрузки матриц\n");
+    // Загрузка матриц
+    if (load_matrix("src/matrix/A.txt", &A) != 0 ||
+        load_matrix("src/matrix/B.txt", &B) != 0 ||
+        load_matrix("src/matrix/C.txt", &C) != 0 ||
+        load_matrix("src/matrix/D.txt", &D) != 0) {
+        fprintf(stderr, "Ошибка при загрузке матриц.\n");
         return 1;
     }
+	
+    // Транспонирование C
+    C_T = transpose_matrix(C);
+    // Сложение B + C^T
+    if (add_matrices(B, C_T, &B_plus_CT) != 0) {
+		printf("Ошибка при сложении B и C^T\n");
+		return 1;
+	}
 
-    Matrix *CT = transpose_matrix(C);
-    Matrix *BplusCT = add_matrix(B, CT);
-    Matrix *expr = sub_matrix(BplusCT, D);
-    Matrix *result = mul_matrix(A, expr);
-
-    printf("Результат выражения A×(B+C^T−D):\n");
-    print_matrix_console(result);
-    save_matrix_to_file("data/output.txt", result);
-
-    // Очистка
+	
+    // Вычитание B + C^T - D
+    if (subtract_matrices(B_plus_CT, D, &B_plus_CT_minus_D) != 0) {
+        fprintf(stderr, "Ошибка при вычитании D.\n");
+        return 1;
+    }
+	
+    // Умножение A * (B + C^T - D)
+    if (multiply_matrices(A, B_plus_CT_minus_D, &Result) != 0) {
+        fprintf(stderr, "Ошибка при умножении матриц.\n");
+        return 1;
+    }
+	
+    // Сохранение результата
+    if (save_matrix("src/output/result.txt", Result) != 0) {
+        fprintf(stderr, "Ошибка при сохранении результата.\n");
+        return 1;
+    }
+    
     free_matrix(A); free_matrix(B); free_matrix(C); free_matrix(D);
-    free_matrix(CT); free_matrix(BplusCT); free_matrix(expr); free_matrix(result);
+    free_matrix(C_T); free_matrix(B_plus_CT); free_matrix(B_plus_CT_minus_D); free_matrix(Result);
+
     return 0;
 }
 

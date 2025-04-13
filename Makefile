@@ -1,46 +1,43 @@
-# Компилятор
+# Компилятор и флаги
 CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -g
+INCLUDES = -Iinclude -Isrc/matrix -Isrc/output
+LIBS = -lcunit
 
-# Флаги компиляции
-CFLAGS = -Wall -Wextra -g -std=c11 -Iinclude
+# Исходники
+SRC = src/matrix/matrix.c src/output/output.c
+MAIN = src/main.c
+TESTS = tests/tests_matrix.c tests/tests_output.c tests/tests_main.c
 
-# Каталоги
-SRC_DIR = src
-OBJ_DIR = obj
-BIN_DIR = bin
+# Цели
+all: build/main
 
-# Исходники и объектные файлы
-SRC = $(wildcard $(SRC_DIR)/*.c) main.c
-OBJ = $(patsubst %.c, $(OBJ_DIR)/%.o, $(notdir $(SRC)))
+build/main: $(MAIN) $(SRC) | build
+	$(CC) $(CFLAGS) $(INCLUDES) $^ -o $@
 
-# Имя исполняемого файла
-TARGET = $(BIN_DIR)/matrix_main
+# CUnit-тесты
+tests: build/tests_matrix build/tests_output build/tests_main
 
-# Правило по умолчанию
-all: $(TARGET)
+build/tests_matrix: tests/tests_matrix.c $(SRC) | build
+	$(CC) $(CFLAGS) $(INCLUDES) $^ -o $@ $(LIBS)
 
-# Компиляция исполняемого файла
-$(TARGET): $(OBJ)
-	@mkdir -p $(BIN_DIR)
-	$(CC) $(CFLAGS) $^ -o $@
+build/tests_output: tests/tests_output.c $(SRC) | build
+	$(CC) $(CFLAGS) $(INCLUDES) $^ -o $@ $(LIBS)
 
-# Компиляция .c в .o
-$(OBJ_DIR)/%.o: %.c
-	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+build/tests_main: tests/tests_main.c $(SRC) | build
+	$(CC) $(CFLAGS) $(INCLUDES) $^ -o $@ $(LIBS)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+run_tests: tests
+	./build/tests_matrix
+	./build/tests_output
+	./build/tests_main
 
-# Очистка
+# Создание папки build, если не существует
+build:
+	mkdir -p build
+
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
+	rm -rf build/*
 
-# Пересборка
 rebuild: clean all
-
-# Отладочная сборка
-debug: CFLAGS += -DDEBUG
-debug: rebuild
 

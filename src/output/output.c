@@ -11,7 +11,7 @@ void print_matrix_console(const Matrix *m) {
 
     for (int i = 0; i < m->rows; i++) {
         for (int j = 0; j < m->cols; j++)
-            printf("%8.*lf ", PRINT_PRECISION, m->data[i][j]);  // Используем PRINT_PRECISION
+            printf("%8.*d ", PRINT_PRECISION, m->data[i][j]);  // Используем PRINT_PRECISION
         printf("\n");
     }
     printf("\n");
