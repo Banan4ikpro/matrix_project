@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "matrix.h"
+#include "output.h"
 
 int main() {
     Matrix *A, *B, *C, *D;
@@ -18,7 +19,8 @@ int main() {
     Matrix *result = mul_matrix(A, expr);
 
     printf("Результат выражения A×(B+C^T−D):\n");
-    print_matrix(result);
+    print_matrix_console(result);
+    save_matrix_to_file("data/output.txt", result);
 
     // Очистка
     free_matrix(A); free_matrix(B); free_matrix(C); free_matrix(D);

@@ -1,10 +1,12 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+#include "config.h"
+
 typedef struct {
     int rows;
     int cols;
-    double **data;
+    elem_t **data;
 } Matrix;
 
 Matrix* create_matrix(int rows, int cols);
